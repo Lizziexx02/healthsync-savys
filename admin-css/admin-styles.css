@@ -1,0 +1,925 @@
+/* -------- General Styling ------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFF5F5;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px; 
+    background-color: white;
+    width: 100%;
+}
+
+/* Header Logo */
+header .logo-img {
+    height: 50px; 
+    width: auto;
+}
+
+/* Login Page Logo */
+.login-container .logo-img {
+    height: 100px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px; 
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #C2185B;
+    font-weight: 500;
+    font-size: 15px; 
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    white-space: nowrap; 
+}
+
+.nav-item.active {
+    background-color: #FFD6D6;
+    color: #7D1535;           
+    font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1100px) {
+    header {
+        padding: 15px 20px;
+    }
+    nav ul {
+        gap: 5px;
+    }
+    .nav-item {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+}
+
+
+
+/* ================== Admin Login Page ================== */
+.admin-login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Logo 1 */
+.healthsync-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #590D2E;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #590D2E;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD6D6;
+    border-radius: 12px;
+    color: #590D2E;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border: 2px solid #FF8FAB;
+}
+
+.error {
+    color: #E91E63;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.btn-login {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Links */
+.signup-link {
+    font-size: 16px;
+    color: #590D2E;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #FF8FAB;
+}
+
+.signup-link a:hover {
+    color: #FF64D4;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-login-section {
+        padding: 20px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .btn-login {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* ================= Admin Dashboard  =================*/
+.dashboard-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.summary-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    min-height: 150px;
+}
+
+.summary-box h3 {
+    font-size: 24px;
+    color: #590D2E;
+    margin-bottom: 15px;
+}
+
+.summary-box p {
+    font-size: 36px;
+    color: #FF8FAB;
+    font-weight: bold;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    padding: 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dashboard-section h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Cards or Stats Display */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stats-card {
+    background-color: #FF8FAB;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    min-height: 150px;
+}
+
+.stats-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.stats-card p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Buttons for Actions */
+.btn-action {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 30px;
+}
+
+.btn-action:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .dashboard-summary {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .summary-box {
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-card {
+        width: 100%;
+        min-height: 120px;
+    }
+
+    .dashboard-section {
+        padding: 20px;
+    }
+}
+
+
+
+/* ======================
+    Manage Products Page 
+   ====================== */
+.admin-products {
+    padding: 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admin-products h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.products-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.products-table th, .products-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.products-table th {
+    background-color: #FF8FAB;
+    color: white;
+    font-weight: 600;
+}
+
+.products-table td {
+    color: #590D2E;
+}
+
+.products-table td a {
+    text-decoration: none;
+    color: #590D2E;
+}
+
+.products-table td a:hover {
+    color: #FF8FAB;
+}
+
+/* Button for Adding New Product */
+.btn-add-product {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.btn-add-product:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-products {
+        padding: 20px;
+    }
+
+    .products-table th, .products-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-add-product {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* ================== 
+    Add Product Page 
+   ================== */
+.admin-add-product {
+    padding: 30px 40px;
+    max-width: 600px;   
+    margin: 0 auto;      
+    text-align: left;
+    background-color: white;  
+    border-radius: 15px;      
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.admin-add-product h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Add Product Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #590D2E;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea, .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD6D6;
+    border-radius: 12px;
+    color: #590D2E;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+    border: 2px solid #FF8FAB;
+}
+
+.input-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Button Styling */
+.btn-save {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn-save:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Image Preview */
+.input-group img {
+    max-width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-add-product {
+        padding: 20px;
+        max-width: 90%; /* Reduce form width on smaller screens */
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .input-group input, .input-group textarea, .input-group select {
+        font-size: 14px;
+    }
+
+    .btn-save {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* ===================
+    Edit Product Page 
+   =================== */
+.admin-edit-product {
+    padding: 40px 20px;
+    max-width: 600px;   
+    margin: 0 auto;     
+    text-align: left;
+    background-color: white; 
+    border-radius: 15px;    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.admin-edit-product h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Edit Product Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #590D2E;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea, .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD6D6;
+    border-radius: 12px;
+    color: #590D2E;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+    border: 2px solid #FF8FAB;
+}
+
+.input-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Button Styling */
+.btn-save {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn-save:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Image Preview */
+.input-group img {
+    max-width: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-edit-product {
+        padding: 20px;
+        max-width: 90%; /* Reduce form width on smaller screens */
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .input-group input, .input-group textarea, .input-group select {
+        font-size: 14px;
+    }
+
+    .btn-save {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* ====================
+    Manage Orders Page
+   ==================== */
+.admin-orders {
+    padding: 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admin-orders h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.orders-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.orders-table th, .orders-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.orders-table th {
+    background-color: #FF8FAB;
+    color: white;
+    font-weight: 600;
+}
+
+.orders-table td {
+    color: #590D2E;
+}
+
+.orders-table td a {
+    text-decoration: none;
+    color: #FF64D4;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: #FFD6D6;
+    transition: background-color 0.3s ease;
+}
+
+.orders-table td a:hover {
+    background-color: #FF8FAB;
+    color: white;
+}
+
+/* Order Status Dropdown */
+.status-dropdown {
+    background-color: #FF8FAB;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.status-dropdown:hover {
+    background-color: #FF64D4;
+}
+
+.status-dropdown option {
+    background-color: #FF8FAB;
+    color: white;
+}
+
+/* Button for Adding New Product */
+.btn-add-product {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.btn-add-product:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-orders {
+        padding: 20px;
+    }
+
+    .orders-table th, .orders-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-add-product {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* =================== Manage Users Page  =================== */
+.admin-users {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admin-users h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Users Table */
+.users-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.users-table th, .users-table td {
+    padding: 12px;
+    border: 1px solid #FFD6D6;
+    text-align: center;
+}
+
+.users-table th {
+    background-color: #FF8FAB;
+    color: white;
+    font-weight: 600;
+}
+
+.users-table td {
+    background-color: white;
+}
+
+.users-table tr:nth-child(even) {
+    background-color: #F9F9F9;
+}
+
+.users-table td a {
+    text-decoration: none;
+    color: #590D2E;
+}
+
+.users-table td a:hover {
+    color: #FF8FAB;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-users {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .users-table {
+        font-size: 14px;
+    }
+
+    .btn-add-user {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* ================  Edit User Page  ================ */
+.admin-edit-user {
+    padding: 40px 20px;
+    max-width: 600px;   
+    margin: 0 auto;      
+    text-align: left;
+    background-color: white;  
+    border-radius: 15px;      
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.admin-edit-user h2 {
+    font-size: 36px;
+    color: #590D2E;
+    margin-bottom: 20px;
+}
+
+/* Edit User Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #590D2E;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD6D6;
+    border-radius: 12px;
+    color: #590D2E;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border: 2px solid #FF8FAB;
+}
+
+/* Button Styling */
+.btn-update {
+    background: linear-gradient(90deg, #FF8FAB 0%, #FF64D4 100%);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn-update:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1000px) {
+    .admin-edit-user {
+        padding: 20px;
+        max-width: 90%; /* Reduce form width on smaller screens */
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .btn-update {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+.status-badge {
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+/* Dynamic colors based on status text */
+.status-pending { background-color: #ffeaa7; color: #d6a01e; }
+.status-shipped { background-color: #81ecec; color: #00b894; }
+    .status-delivered { background-color: #55efc4; color: #00b894; }
+    .status-cancelled { background-color: #ff7675; color: #d63031; }
+    .status-paid { color: #2ecc71; font-weight: bold; }
+    .status-unpaid { color: #e74c3c; font-weight: bold; }

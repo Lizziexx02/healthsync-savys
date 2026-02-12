@@ -1,0 +1,478 @@
+/* ============= General Styling ============= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFF5F5;
+    overflow-x: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: white;
+}
+
+/* Logo */
+.healthsync-logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 55px;
+    width: auto;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #C2185B;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active {
+    background-color: #FFD6D6;
+    color: #7D1535;           
+    font-weight: 600;
+}
+
+.nav-item:hover:not(.active) {
+    color: #E91E63;
+}
+
+.nav-item.login-link {
+    background-color: transparent; 
+    color: #C2185B;  
+}
+
+.nav-item.login-link:hover {
+    color: #E91E63;  
+}
+
+footer {
+    background-color: #FFD6D6;
+    color: #7D1535;     
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* =================
+    Account Section 
+   =================*/
+.account-section {
+    padding: 40px 80px;
+    background-color: #FFF5F5;
+}
+
+.account-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-info {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item label {
+    font-weight: 600;
+    color: #590D2E;
+}
+
+.info-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #7D1535;
+}
+
+/* Address container styles */
+.address-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.address-container .address {
+    font-size: 14px;
+    color: #590D2E;
+    margin-bottom: 10px;
+}
+
+.address-container .edit-link {
+    font-size: 14px;
+    color: #FF8FAB;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.address-container .edit-link:hover {
+    color: #FF64D4;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Edit Button Style */
+.edit-link {
+    color: #FF8FAB;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 1px;
+    border: none;
+    background-color: white;
+}
+
+.edit-link:hover {
+    color: #FF64D4;
+    background-color: white;
+    border: none;
+}
+
+/*  Addresses Section */
+.addresses-section {
+    margin-top: 30px;
+}
+
+.add-address-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FF8FAB;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.add-address-link:hover {
+    color: #FF64D4;
+}
+
+h3 {
+    font-size: 18px;
+    color: #590D2E;
+}
+
+
+
+/* ==================
+    ADD ADDRESS PAGE
+   ================== */
+.add-address-page {
+    padding: 40px 80px;
+    background-color: #FFF5F5;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 24px;
+    color: #590D2E;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #590D2E;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #FFD6D6;
+    border-radius: 12px;
+    color: #590D2E;
+    outline: none;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #FF8FAB;
+}
+
+/* First Name and Last Name side by side */
+.double-input {
+    display: flex;
+    gap: 20px;
+}
+
+.input-half {
+    flex: 1;
+}
+
+/* Postal Code and City side by side */
+.double-input {
+    display: flex;
+    gap: 20px;
+}
+
+.input-half {
+    flex: 1;
+}
+
+/* Submit Button */
+.btn-save {
+    background-color: #FF8FAB;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 100, 212, 0.3);
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.btn-save:hover {
+    box-shadow: 0 6px 15px rgba(255, 100, 212, 0.4);
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #590D2E;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.order-history-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.order-history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.order-card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.order-id {
+    font-weight: bold;
+    color: #333;
+}
+
+.order-date {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.order-status {
+    font-size: 0.9em;
+    color: green; /* Change color based on status */
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.product-quantity {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product-total {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* Add CSS for modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add some styling to the modal */
+.modal-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
